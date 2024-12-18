@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SOG - A nonprofit organization offering a helping hand to those in need.">
+    <title>SOG - Helping Hand</title>
+    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6/babel.min.js"></script>
+    <!-- Bootstrap CSS for responsive and polished design -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+            color: #337036;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+    background-color: #388e3c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;  /* Reduced padding */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 80px;  /* Reduced size */
+    height: 80px; /* Ensuring height is equal to width */
+    border-radius: 50%; /* Making the image circular */
+    object-fit: cover;
+}
+
+.title {
+    font-size: 1.6em;  /* Reduced font size */
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;  /* Reduced gap */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;  /* Reduced font size */
+    padding: 6px 16px;  /* Reduced padding */
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+        .main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            color: #388e3c;
+        }
+
+        .section-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .founder-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer {
+            background-color: #388e3c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer-text {
+            margin: 5px 0;
+        }
+
+        /* Custom styles for the header */
+        .header .navbar-nav {
+            flex-direction: row;
+        }
+
+        .header .nav-item {
+            margin-right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div>
+                    <header className="header">
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <img src="images/sog_logo.jpeg" alt="SOG Logo" className="logo" />
+                            <h1 className="title">SOG - Helping Hand</h1>
+                        </div>
+                        <nav className="nav">
+                            <a href="#about" className="nav-link">About Us</a>
+                            <a href="#projects" className="nav-link">Our Projects</a>
+                            <a href="#contact" className="nav-link">Contact</a>
+                        </nav>
+                    </header>
+                    <main className="main">
+                        <section id="about" className="section">
+                            <h2 className="section-title">About Us</h2>
+                            <p className="section-text">SOG is a non-profitable charity dedicated to lending a helping hand to those in need. We strive to create a positive impact in the lives of individuals and communities through compassion, dedication, and support.</p>
+                        </section>
+                        <section id="projects" className="section">
+                            <h2 className="section-title">Our Projects</h2>
+                            <p className="section-text">Our projects include providing educational resources, food distribution programs, and community development initiatives. We believe in the power of collective action to bring meaningful change.</p>
+                        </section>
+                        <section id="contact" className="section">
+                            <h2 className="section-title">Contact Us</h2>
+                            <div className="contact-info">
+                                <img src="images/profile.jpg" alt="Founder Photo" className="founder-photo" />
+                                <div>
+                                    <p className="section-text"><strong>POTHURAJU ISSAC</strong></p>
+                                    <p className="section-text"><em>Founder & CEO</em></p>
+                                    <p className="section-text">Email: pissac@gmail.com</p>
+                                    <p className="section-text">Phone: 81216207041</p>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+                    <footer className="footer">
+                        <p className="footer-text">&copy; 2024 SOG. All Rights Reserved.</p>
+                    </footer>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
